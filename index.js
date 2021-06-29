@@ -257,7 +257,7 @@ function show()
 
 	}
 	op_state = "=";
-	display_value = buffer_val.toFixed(5).toString();
+	display_value = buffer_val.toFixed(2).toString();
 	numeric_val = buffer_val;
 	screen(display_value);
 	buffer_val = 0;
