@@ -109,13 +109,21 @@ function changeTheme()
 
 
 function numberInput( id )
-{ if(display_value == "0")
+{  if(display_value.length <=15)
+	{
+	  if(display_value == "0")
+	  {
+	    display_value = "";
+	  }
+	  display_value += document.getElementById(id).value;
+	  numeric_val = parseFloat(display_value);
+	  screen(display_value);
+
+	}
+  else if(display_value.length > 15)
   {
-    display_value = "";
+  	alert("Max length exceeded!!");
   }
-  display_value += document.getElementById(id).value;
-  numeric_val = parseFloat(display_value);
-  screen(display_value);
 }
 
 
